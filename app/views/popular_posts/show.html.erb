@@ -2,7 +2,7 @@
 
 
   <article>
-    <h3> <%= @header %> </h3>
+    <h3> <%= @header.upcase %> </h3>
       <div id="blog_info">
         <%= image_tag 'head.jpg' %> <p><span id="name">Amanda Noelle</span> on<span id="date">  Monday Oct. 7th 9:22pm</span> </p>
       </div>
@@ -45,6 +45,10 @@
 </div>
 
 <div id="content">
+
   <% @post_name.each do |post| %>
+
+
     <div class="pic" style="background: url(<%= image_path @pics[@post_name.index(post)] %>); background-size: cover;"><div class="overlay2"></div><h4><%= link_to post.capitalize, post_path(post_name: post) %></h4></div>
   <% end %>
+</div>
