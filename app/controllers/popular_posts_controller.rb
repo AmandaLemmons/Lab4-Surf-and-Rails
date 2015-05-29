@@ -15,10 +15,10 @@ class PopularPostsController < ApplicationController
 
     @header =  @post_name.find do |post|
     post == params[:post_name]
-    # post.parameterize
+
     end
 
-    # @post_name[(params[:post_name])]
+
 
 
   end
